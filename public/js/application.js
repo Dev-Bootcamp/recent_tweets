@@ -1,7 +1,18 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  
+  $('#wait').hide();
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('form').on('submit', function(e) {
+    e.preventDefault();
+    $('#tweet_log').remove();
+    $('#wait').show();
+
+    var data = $('form').serialize();
+    $.post('/', data, function(response){
+      $('form').after(response);
+      $('#wait').hide();
+    });
+    
+  });
+
 });

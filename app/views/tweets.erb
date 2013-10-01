@@ -1,11 +1,9 @@
-
-
+<div id="tweet_log">
 
 The Most Recent Tweets from Twitter User:
-
 <%= @user.username %>
-
-<h2>Tweets</h2>
-<% @tweets.each do |tweet| %>
-  <p><%= tweet.text %></p>
-<% end %>
+  <h2>Tweets</h2>
+  <% @tweets.each do |tweet| %>
+    <p><%= tweet.text %></p>
+  <% end %>
+</div>

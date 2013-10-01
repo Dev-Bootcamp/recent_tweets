@@ -1,14 +1,13 @@
-index.erb
-
 <div class="container">
   <h1>Recent Tweets</h1>
 
   <table>
-      <form id="get_tweets" action='/tweets' method="POST">
+      <form id="get_tweets" action='/' method="POST">
         <p>http://localhost:9393/
           <input type="text" name="handle" placeholder="enter twitter handle">
           <input type="submit" value="Get Tweets!">
         </p>
     </form>
   </table>
+  <p id="wait">This is waiting time.</p>
 </div>
